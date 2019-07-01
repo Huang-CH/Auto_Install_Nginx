@@ -67,7 +67,7 @@ def open_firewall():
     #开放防火墙80端口
     subprocess.call('firewall-cmd --zone=public --add-port=80/tcp --permanent',shell=True)
     #重启防火墙服务
-    subprocess.call('firewall-cmd --reload')
+    subprocess.call('firewall-cmd --reload',shell=True)
 
 if __name__ == '__main__':
     install_pcre()
